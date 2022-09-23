@@ -23,3 +23,7 @@ function sumAll() {
     return numbers.reduce(function (numbers, sum) { return sum + numbers; });
 }
 // console.log(sumAll(1, 2, 3, 4, 5, 6, 7, 8, 9))
+function optionalParameters(a, b) {
+    if (a === void 0) { a = 15; }
+    return a + b;
+}
