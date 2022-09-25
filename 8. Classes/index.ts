@@ -44,3 +44,30 @@ class Truck extends Vehicle{
 const truck = new Truck(16000, 120000, 'SH300', 10, 'white', {width: 2, length: 10, height: 2.5})
 
 console.log(truck)
+
+interface CustomMath{
+    sum(...num: number[]): number
+}
+class Calc implements CustomMath{
+    sum(...num: number[]): number {
+        return num.reduce((sum, value) => sum + value)
+    }
+}
+const newCalc = new Calc()
+console.log(newCalc.sum(1, 2, 3, 4, 5))
+
+class ParameterProperties{
+    constructor(public name: string, private password: string){
+        this.name = name
+        this.password = password
+    }
+}
+class A {
+
+}
+class B {
+
+}
+// class C extends A  B{
+
+// }

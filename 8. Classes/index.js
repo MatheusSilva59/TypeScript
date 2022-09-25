@@ -43,3 +43,43 @@ var Truck = /** @class */ (function (_super) {
 }(Vehicle));
 var truck = new Truck(16000, 120000, 'SH300', 10, 'white', { width: 2, length: 10, height: 2.5 });
 console.log(truck);
+var Calc = /** @class */ (function () {
+    function Calc() {
+    }
+    Calc.prototype.sum = function () {
+        var num = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            num[_i] = arguments[_i];
+        }
+        return num.reduce(function (sum, value) { return sum + value; });
+    };
+    return Calc;
+}());
+var newCalc = new Calc();
+console.log(newCalc.sum(1, 2, 3, 4, 5));
+var ParameterProperties = /** @class */ (function () {
+    function ParameterProperties(name, password) {
+        this.name = name;
+        this.password = password;
+        this.name = name;
+        this.password = password;
+    }
+    return ParameterProperties;
+}());
+var A = /** @class */ (function () {
+    function A() {
+    }
+    return A;
+}());
+var B = /** @class */ (function () {
+    function B() {
+    }
+    return B;
+}());
+var C = /** @class */ (function (_super) {
+    __extends(C, _super);
+    function C() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return C;
+}(A));
